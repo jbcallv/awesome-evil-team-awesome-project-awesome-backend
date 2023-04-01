@@ -15,7 +15,7 @@ app.use(cors());
  */
 app.get("/login", (req, res) => {
   let state = utils.generateRandomString(16);
-  let scope = 'user-read-private user-read-email';
+  let scope = 'user-read-private user-read-email playlist-modify-public';
 
   res.send('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
